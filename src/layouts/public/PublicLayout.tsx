@@ -1,8 +1,8 @@
 import {Outlet} from "react-router-dom";
-import * as React from "react";
-import NavigationBar from "./components/NavigationBar";
-import {Sidebar} from "./components/Sidebar";
+import NavigationBar from "./components/navigationBar/NavigationBar";
+import {Sidebar} from "./components/sidebar/Sidebar";
 import './publicLayout.css'
+
 
 export const PublicLayout = () => {
     return (
@@ -10,9 +10,8 @@ export const PublicLayout = () => {
             <NavigationBar />
             <div className="container-fluid">
                 <div className="row no-gutters">
-                    <Sidebar className="col-2 bg-dark v100" />
-                    <div className="col-10 bg-secondary">
-                        <div className="bg-primary outlet">
+                    <div className="col-12">
+                        <div className=" outlet">
                             <Outlet />
                         </div>
                     </div>

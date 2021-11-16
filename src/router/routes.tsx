@@ -1,9 +1,7 @@
-import * as React from "react";
-
-
 import type {RouteObject} from "react-router-dom";
 
 import {PublicRoutes} from "./publicRoutes";
+import {AdminRoutes} from "./adminRoutes";
 
 export interface RouteCustom extends RouteObject {
     label: string
@@ -12,5 +10,6 @@ export interface RouteCustom extends RouteObject {
 
 
 export const routes: RouteCustom[] = [
-    ...PublicRoutes
+    ...PublicRoutes,
+    ...AdminRoutes
 ];
